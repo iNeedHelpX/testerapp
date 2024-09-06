@@ -125,47 +125,61 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: containerBox().width,
                 decoration: containerBox().decoration,
                 child: LabColumn(
-                  // textDirection: TextDirection.ltr,
                   name: 'labcol',
                   children: [
                     Row(
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisAlignment: MainAxisAlignment.start,
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      // crossAxisAlignment: CrossAxisAlignment.baseline,
+                      // textBaseline: TextBaseline.alphabetic,
                       children: [
-                        IconButton(
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.only(right: 2, left: 2),
-                          onPressed: () {
-                            //do something here
-                          },
-                          icon: Icon(
-                              color: darkgrey,
-                              size: 45,
-                              MdiIcons.notebookHeart),
+                        Expanded(
+                          child: IconButton(
+                            alignment: AlignmentDirectional.topStart,
+                            padding: EdgeInsets.only(right: 10, left: 5),
+                            onPressed: () {
+                              //do something here
+                            },
+                            icon: Icon(
+                                color: darkgrey,
+                                size: 45,
+                                MdiIcons.notebookHeart),
+                          ),
                         ),
 
                         //just to fill the space for now and create distance between the icons
-                        Spacer(),
+
+                        Expanded(
+                          child: IconButton(
+                            alignment: AlignmentDirectional.topCenter,
+                            padding: EdgeInsets.only(right: 10, left: 5),
+                            onPressed: () {
+                              //do something here
+                            },
+                            icon: Icon(
+                                color: darkgrey, size: 45, MdiIcons.ladybug),
+                          ),
+                        ),
+
                         //I only want to show the icon if widget.isExpanded is true
 
-                        widget.isExpanded
-                            ? IconButton(
-                                alignment: Alignment.center,
-                                padding: EdgeInsets.only(right: 2, left: 2),
-                                onPressed: () {
-                                  //do something here
-                                  setState(() {
-                                    widget.isExpanded = false;
-                                  });
-                                },
-                                icon: Icon(
-                                    size: 25,
-                                    color: logout,
-                                    FontAwesomeIcons.deleteLeft),
-                              )
-                            : new Container(),
+                        Expanded(
+                          child: widget.isExpanded
+                              ? IconButton(
+                                  alignment: AlignmentDirectional.topEnd,
+                                  padding: EdgeInsets.only(right: 5, left: 10),
+                                  onPressed: () {
+                                    //do something here
+                                    setState(() {
+                                      widget.isExpanded = false;
+                                    });
+                                  },
+                                  icon: Icon(
+                                      size: 35,
+                                      color: logout,
+                                      FontAwesomeIcons.deleteLeft),
+                                )
+                              : Container(),
+                        )
                       ],
                     ),
                     const LabText(
