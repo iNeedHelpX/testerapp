@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:flutter_lab/flutter_lab.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:testerapp/colors/colours_list.dart';
@@ -115,21 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: SingleChildScrollView(
           child: LabColumn(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            //
-            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-            // action in the IDE, or press "p" in the console), to see the
-            // wireframe for each widget.
             name: "newcolumn1",
-
             children: <Widget>[
               LabContainer(
                 // Container parameters
@@ -143,8 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Row(
                       // crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // mainAxisAlignment: MainAxisAlignment.start,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
 
                       children: [
                         IconButton(
@@ -153,8 +140,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: () {
                             //do something here
                           },
-                          icon: Icon(size: 32, Boxicons.bxs_bookmark_heart),
+                          icon: Icon(
+                              color: darkgrey,
+                              size: 45,
+                              MdiIcons.notebookHeart),
                         ),
+
+                        //just to fill the space for now and create distance between the icons
                         Spacer(),
                         //I only want to show the icon if widget.isExpanded is true
 
@@ -168,8 +160,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                     widget.isExpanded = false;
                                   });
                                 },
-                                icon:
-                                    Icon(size: 25, FontAwesomeIcons.deleteLeft),
+                                icon: Icon(
+                                    size: 25,
+                                    color: logout,
+                                    FontAwesomeIcons.deleteLeft),
                               )
                             : new Container(),
                       ],
