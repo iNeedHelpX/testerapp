@@ -1,16 +1,5 @@
-# testerapp
+# FlutterLab tester app
 
-A new Flutter project.
+Just got into flutter_lab and fooling around with it. This is a simple app that uses the flutter_lab package to test the functionality of the package.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Link to flutter_lab on the app store](https://apps.apple.com/ca/app/flutterlab-flutter-app-tools/id6451071756?mt=12)
