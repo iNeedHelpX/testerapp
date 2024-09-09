@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:flutter_lab/flutter_lab.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -188,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     ConstrainedBox(
                       constraints: widget.isExpanded
-                          //shows th text
+                          //shows the text
                           ? new BoxConstraints(
                               maxHeight: containerBox().height! / 1.46)
                           : //THIS ONE COVERS THE TEXT
